@@ -9,7 +9,7 @@ import NotFound from "./pages/NotFound";
 import AppSidebar from "@/components/AppSidebar";
 import { PomodoroProvider } from "@/context/PomodoroProvider";
 import { SidebarProvider } from "@/components/ui/sidebar";
-import { useTheme } from "@/hooks/useTheme";
+import { ThemeProvider } from "@/context/ThemeProvider";
 
 // Pages
 import Timer from "@/pages/Timer";
@@ -20,34 +20,36 @@ import Appearance from "@/pages/Appearance"; // New page for theme selection
 const queryClient = new QueryClient();
 
 const App = () => {
-  useTheme(); // Make sure theme is always applied globally
+  // Remove useTheme(); it is now handled by ThemeProvider at the root
 
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <PomodoroProvider>
-          <BrowserRouter>
-            <SidebarProvider>
-              <div className="flex min-h-screen bg-[#181615] text-white overflow-x-hidden w-full">
-                <AppSidebar />
-                <main className="flex-1">
-                  <Routes>
-                    <Route path="/" element={<Index />} />
-                    <Route path="/timer" element={<Timer />} />
-                    <Route path="/tasks" element={<Tasks />} />
-                    <Route path="/activity" element={<Activity />} />
-                    <Route path="/appearance" element={<Appearance />} />
-                    {/* If trying to access /profile or /settings/general, redirect to /appearance */}
-                    <Route path="/profile" element={<Navigate to="/appearance" replace />} />
-                    <Route path="/settings/general" element={<Navigate to="/appearance" replace />} />
-                    <Route path="*" element={<NotFound />} />
-                  </Routes>
-                </main>
-              </div>
-              <Toaster />
-              <Sonner />
-            </SidebarProvider>
-          </BrowserRouter>
+          <ThemeProvider>
+            <BrowserRouter>
+              <SidebarProvider>
+                <div className="flex min-h-screen bg-[#181615] text-white overflow-x-hidden w-full">
+                  <AppSidebar />
+                  <main className="flex-1">
+                    <Routes>
+                      <Route path="/" element={<Index />} />
+                      <Route path="/timer" element={<Timer />} />
+                      <Route path="/tasks" element={<Tasks />} />
+                      <Route path="/activity" element={<Activity />} />
+                      <Route path="/appearance" element={<Appearance />} />
+                      {/* If trying to access /profile or /settings/general, redirect to /appearance */}
+                      <Route path="/profile" element={<Navigate to="/appearance" replace />} />
+                      <Route path="/settings/general" element={<Navigate to="/appearance" replace />} />
+                      <Route path="*" element={<NotFound />} />
+                    </Routes>
+                  </main>
+                </div>
+                <Toaster />
+                <Sonner />
+              </SidebarProvider>
+            </BrowserRouter>
+          </ThemeProvider>
         </PomodoroProvider>
       </TooltipProvider>
     </QueryClientProvider>
