@@ -21,14 +21,14 @@ const sections = [
       { label: "Timer", icon: Clock, to: "/timer" },
       { label: "Tasks", icon: BookOpen, to: "/tasks" },
       { label: "Activity", icon: Book, to: "/activity" },
-      { label: "Profile", icon: User, to: "/profile" },
+      // Removed profile!
     ],
   },
   {
     label: "Settings",
     items: [
-      { label: "General", icon: Settings, to: "#" },
-      { label: "Appearance", icon: Settings, to: "#" },
+      // Removed General!
+      { label: "Appearance", icon: Settings, to: "/appearance" },
     ],
   },
 ];
@@ -44,7 +44,7 @@ const AppSidebar = () => {
               P
             </div>
             <div>
-              <div className="font-semibold text-lg text-white leading-4">Pomito</div>
+              <div className="font-semibold text-lg text-white leading-4">Pomeshh</div>
               <div className="text-xs text-white/60">v1.0.0</div>
             </div>
           </div>
@@ -94,3 +94,4 @@ const AppSidebar = () => {
 };
 
 export default AppSidebar;
+

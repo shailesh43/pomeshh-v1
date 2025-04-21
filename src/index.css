@@ -5,7 +5,7 @@
 
 @layer base {
   :root {
-    /* Pomito dark theme */
+    /* Obsidian (DEFAULT - matches UI shown) */
     --background: 32 8% 10%;
     --foreground: 0 0% 98%;
     --card: 32 10% 16%;
@@ -27,6 +27,73 @@
     --ring: 240 4.9% 12%;
     --radius: 1rem;
     font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  }
+
+  .theme-obsidian {
+    --background: 32 8% 10%;
+    --foreground: 0 0% 98%;
+    --card: 32 10% 16%;
+    --card-foreground: 0 0% 98%;
+    --popover: 32 10% 30%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 14%;
+    --secondary: 30 10% 18%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 32 10% 10%;
+    --muted-foreground: 0 0% 80%;
+    --accent: 0 0% 100%;
+    --accent-foreground: 0 0% 8%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 240 4.9% 12%;
+    --radius: 1rem;
+  }
+  .theme-catppuccin {
+    --background: 229 15% 18%;
+    --foreground: 230 28% 98%;
+    --card: 229 15% 23%;
+    --card-foreground: 230 28% 98%;
+    --popover: 229 15% 28%;
+    --popover-foreground: 230 28% 98%;
+    --primary: 310 20% 76%;
+    --primary-foreground: 232 18% 18%;
+    --secondary: 237 23% 69%;
+    --secondary-foreground: 230 28% 98%;
+    --muted: 232 23% 24%;
+    --muted-foreground: 230 28% 75%;
+    --accent: 310 20% 76%;
+    --accent-foreground: 232 18% 18%;
+    --destructive: 2 81% 65%;
+    --destructive-foreground: 230 28% 98%;
+    --border: 229 15% 32%;
+    --input: 229 15% 35%;
+    --ring: 238 12% 32%;
+    --radius: 1rem;
+  }
+  .theme-gruvbox {
+    --background: 32 19% 15%;
+    --foreground: 41 21% 86%;
+    --card: 39 16% 26%;
+    --card-foreground: 41 21% 86%;
+    --popover: 45 17% 22%;
+    --popover-foreground: 41 21% 86%;
+    --primary: 29 72% 60%;
+    --primary-foreground: 30 27% 15%;
+    --secondary: 66 17% 43%;
+    --secondary-foreground: 41 21% 86%;
+    --muted: 32 10% 22%;
+    --muted-foreground: 41 21% 75%;
+    --accent: 57 30% 50%;
+    --accent-foreground: 30 27% 15%;
+    --destructive: 14 76% 52%;
+    --destructive-foreground: 41 21% 86%;
+    --border: 29 13% 49%;
+    --input: 32 10% 30%;
+    --ring: 32 10% 20%;
+    --radius: 1rem;
   }
 
   * {

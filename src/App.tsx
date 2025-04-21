@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import AppSidebar from "@/components/AppSidebar";
@@ -14,7 +14,7 @@ import { SidebarProvider } from "@/components/ui/sidebar";
 import Timer from "@/pages/Timer";
 import Tasks from "@/pages/Tasks";
 import Activity from "@/pages/Activity";
-import Profile from "@/pages/Profile";
+import Appearance from "@/pages/Appearance"; // New page for theme selection
 
 const queryClient = new QueryClient();
 
@@ -32,8 +32,10 @@ const App = () => (
                   <Route path="/timer" element={<Timer />} />
                   <Route path="/tasks" element={<Tasks />} />
                   <Route path="/activity" element={<Activity />} />
-                  <Route path="/profile" element={<Profile />} />
-                  {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                  <Route path="/appearance" element={<Appearance />} />
+                  {/* If trying to access /profile or /settings/general, redirect to /appearance */}
+                  <Route path="/profile" element={<Navigate to="/appearance" replace />} />
+                  <Route path="/settings/general" element={<Navigate to="/appearance" replace />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </main>
