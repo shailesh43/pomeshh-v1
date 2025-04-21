@@ -1,54 +1,46 @@
-# Pomeshh ⏱️
-
-**Pomeshh** is a minimal, elegant Pomodoro timer app designed to help you stay focused and productive. Built around the **Pomodoro Technique**, Pomeshh encourages deep work sessions followed by short, refreshing breaks — enabling you to get more done, faster.
-
----
-
-## 🚧 Status: In Development
-
-Pomeshh is currently under active development and being built in public. You’re welcome to follow the journey, contribute, or provide feedback!
-
----
-
-## 🧠 About Pomeshh
+# Pomeshh! What is it??
 
 Pomeshh helps you break your work into focused time blocks, typically 25 minutes long, separated by short breaks. This time-management method is proven to boost productivity, reduce burnout, and improve mental clarity.
 
 With an intuitive design and powerful features, Pomeshh is perfect for students, developers, writers, or anyone looking to manage time more effectively.
+You can preview the current build here: [https://pomeshh-v1.vercel.app/](https://pomeshh-v1.vercel.app/)
 
 ---
 
-## ✨ Features
+## Features
 
-- ⏳ **Customizable Work & Break Intervals**  
-  Personalize your Pomodoro sessions to suit your workflow.
-
-- ✅ **Task Management Integration** *(coming soon)*  
-  Organize tasks and check them off as you go.
-
-- 🧘 **Beautiful, Distraction-Free Interface**  
-  Designed to keep you focused without visual noise.
-
-- 📊 **Progress Tracking & Stats**  
-  See how many Pomodoros you've completed and track your streaks.
+- Customizable work and break intervals  
+- Task management integration  
+- Beautiful, distraction-free interface  
+- Progress tracking and statistics
 
 ---
 
-## 🚀 Tech Stack
+## Tech Stack
 
-- [Next.js](https://nextjs.org/)
-- [React](https://react.dev/)
-- [TailwindCSS](https://tailwindcss.com/) *(if used)*
-- [TypeScript](https://www.typescriptlang.org/) *(optional)*
+- Next.js  
+- TypeScript  
+- TailwindCSS  
+- ShadCN UI
 
 ---
 
-## 🛠️ Getting Started
+## Getting Started
 
-Clone the repository and install dependencies:
+Follow these steps to set up Pomeshh locally:
 
-```bash
-git clone https://github.com/your-username/pomeshh.git
-cd pomeshh
-npm install
-npm run dev
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/pomeshh.git
+
+2. **Navigate to the project directory & install dependecies**
+   ```bash
+   cd pomeshh
+   npm install
+   
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+
+---
