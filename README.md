@@ -1,73 +1,54 @@
-# Welcome to your Lovable project
+# Pomeshh ⏱️
 
-## Project info
+**Pomeshh** is a minimal, elegant Pomodoro timer app designed to help you stay focused and productive. Built around the **Pomodoro Technique**, Pomeshh encourages deep work sessions followed by short, refreshing breaks — enabling you to get more done, faster.
 
-**URL**: https://lovable.dev/projects/adf94996-6a1a-4152-8e69-f523f979b8c1
+---
 
-## How can I edit this code?
+## 🚧 Status: In Development
 
-There are several ways of editing your application.
+Pomeshh is currently under active development and being built in public. You’re welcome to follow the journey, contribute, or provide feedback!
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/adf94996-6a1a-4152-8e69-f523f979b8c1) and start prompting.
+## 🧠 About Pomeshh
 
-Changes made via Lovable will be committed automatically to this repo.
+Pomeshh helps you break your work into focused time blocks, typically 25 minutes long, separated by short breaks. This time-management method is proven to boost productivity, reduce burnout, and improve mental clarity.
 
-**Use your preferred IDE**
+With an intuitive design and powerful features, Pomeshh is perfect for students, developers, writers, or anyone looking to manage time more effectively.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## ✨ Features
 
-Follow these steps:
+- ⏳ **Customizable Work & Break Intervals**  
+  Personalize your Pomodoro sessions to suit your workflow.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- ✅ **Task Management Integration** *(coming soon)*  
+  Organize tasks and check them off as you go.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- 🧘 **Beautiful, Distraction-Free Interface**  
+  Designed to keep you focused without visual noise.
 
-# Step 3: Install the necessary dependencies.
-npm i
+- 📊 **Progress Tracking & Stats**  
+  See how many Pomodoros you've completed and track your streaks.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+---
+
+## 🚀 Tech Stack
+
+- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/)
+- [TailwindCSS](https://tailwindcss.com/) *(if used)*
+- [TypeScript](https://www.typescriptlang.org/) *(optional)*
+
+---
+
+## 🛠️ Getting Started
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/your-username/pomeshh.git
+cd pomeshh
+npm install
 npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/adf94996-6a1a-4152-8e69-f523f979b8c1) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
