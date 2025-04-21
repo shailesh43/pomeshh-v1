@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import AppSidebar from "@/components/AppSidebar";
 import { PomodoroProvider } from "@/context/PomodoroProvider";
+import { SidebarProvider } from "@/components/ui/sidebar";
 
 // Pages
 import Timer from "@/pages/Timer";
@@ -22,22 +23,24 @@ const App = () => (
     <TooltipProvider>
       <PomodoroProvider>
         <BrowserRouter>
-          <div className="flex min-h-screen bg-[#181615] text-white overflow-x-hidden">
-            <AppSidebar />
-            <main className="flex-1">{/* Route Content */}
-              <Routes>
-                <Route path="/" element={<Index />} />
-                <Route path="/timer" element={<Timer />} />
-                <Route path="/tasks" element={<Tasks />} />
-                <Route path="/activity" element={<Activity />} />
-                <Route path="/profile" element={<Profile />} />
-                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </main>
-          </div>
-          <Toaster />
-          <Sonner />
+          <SidebarProvider>
+            <div className="flex min-h-screen bg-[#181615] text-white overflow-x-hidden w-full">
+              <AppSidebar />
+              <main className="flex-1">
+                <Routes>
+                  <Route path="/" element={<Index />} />
+                  <Route path="/timer" element={<Timer />} />
+                  <Route path="/tasks" element={<Tasks />} />
+                  <Route path="/activity" element={<Activity />} />
+                  <Route path="/profile" element={<Profile />} />
+                  {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </main>
+            </div>
+            <Toaster />
+            <Sonner />
+          </SidebarProvider>
         </BrowserRouter>
       </PomodoroProvider>
     </TooltipProvider>
@@ -45,3 +48,4 @@ const App = () => (
 );
 
 export default App;
+
