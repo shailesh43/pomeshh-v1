@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -10,18 +9,11 @@ import AppSidebar from "@/components/AppSidebar";
 import { PomodoroProvider } from "@/context/PomodoroProvider";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { ThemeProvider } from "@/context/ThemeProvider";
-
-// Pages
-import Timer from "@/pages/Timer";
-import Tasks from "@/pages/Tasks";
-import Activity from "@/pages/Activity";
-import Appearance from "@/pages/Appearance"; // New page for theme selection
+import Notes from "./pages/Notes";
 
 const queryClient = new QueryClient();
 
 const App = () => {
-  // Remove useTheme(); it is now handled by ThemeProvider at the root
-
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
@@ -38,7 +30,7 @@ const App = () => {
                       <Route path="/tasks" element={<Tasks />} />
                       <Route path="/activity" element={<Activity />} />
                       <Route path="/appearance" element={<Appearance />} />
-                      {/* If trying to access /profile or /settings/general, redirect to /appearance */}
+                      <Route path="/notes" element={<Notes />} />
                       <Route path="/profile" element={<Navigate to="/appearance" replace />} />
                       <Route path="/settings/general" element={<Navigate to="/appearance" replace />} />
                       <Route path="*" element={<NotFound />} />

@@ -1,4 +1,3 @@
-
 import {
   Sidebar,
   SidebarContent,
@@ -9,7 +8,7 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
 } from "@/components/ui/sidebar";
-import { Clock, Book, BookOpen, User, Settings } from "lucide-react";
+import { Clock, Book, BookOpen, User, Settings, FileText } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
 import React from "react";
 import clsx from "clsx";
@@ -21,13 +20,12 @@ const sections = [
       { label: "Timer", icon: Clock, to: "/timer" },
       { label: "Tasks", icon: BookOpen, to: "/tasks" },
       { label: "Activity", icon: Book, to: "/activity" },
-      // Removed profile!
+      { label: "Notes", icon: "file-text", to: "/notes" },
     ],
   },
   {
     label: "Settings",
     items: [
-      // Removed General!
       { label: "Appearance", icon: Settings, to: "/appearance" },
     ],
   },
@@ -61,7 +59,13 @@ const AppSidebar = () => {
                     <SidebarMenuButton asChild>
                       {item.to === "#" ? (
                         <span className="flex items-center px-4 py-2 gap-2 text-white/60 cursor-not-allowed">
-                          <item.icon size={18} strokeWidth={1.5} />
+                          {item.icon === "file-text" ? (
+                            <FileText size={18} strokeWidth={1.5} />
+                          ) : (
+                            item.icon && (typeof item.icon === "string"
+                              ? null
+                              : React.createElement(item.icon, { size: 18, strokeWidth: 1.5 }))
+                          )}
                           <span>{item.label}</span>
                         </span>
                       ) : (
@@ -77,7 +81,13 @@ const AppSidebar = () => {
                           }
                           end
                         >
-                          <item.icon size={18} strokeWidth={1.5} />
+                          {item.icon === "file-text" ? (
+                            <FileText size={18} strokeWidth={1.5} />
+                          ) : (
+                            item.icon && (typeof item.icon === "string"
+                              ? null
+                              : React.createElement(item.icon, { size: 18, strokeWidth: 1.5 }))
+                          )}
                           <span>{item.label}</span>
                         </NavLink>
                       )}
@@ -94,4 +104,3 @@ const AppSidebar = () => {
 };
 
 export default AppSidebar;
-
