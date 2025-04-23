@@ -5,7 +5,7 @@ import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/componen
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { toast } from "@/components/ui/sonner";
-import { Markdown, FilePenLine, Eye } from "lucide-react";
+import { FileText, FilePenLine, Eye } from "lucide-react";
 import { marked } from "marked";
 
 const NOTES_STORAGE_KEY = "NOTES_MD_CONTENT";
@@ -50,7 +50,7 @@ const Notes: React.FC = () => {
     <div className="flex justify-center items-start w-full px-4 pt-8 pb-16">
       <Card className="w-full max-w-3xl bg-card/90 border-card/70 shadow-2xl">
         <CardHeader className="flex flex-row items-center gap-2">
-          <Markdown className="text-primary" />
+          <FileText className="text-primary" />
           <CardTitle className="text-xl md:text-2xl">Notes</CardTitle>
         </CardHeader>
         <CardContent>
@@ -93,3 +93,4 @@ const Notes: React.FC = () => {
 };
 
 export default Notes;
+

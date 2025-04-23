@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -10,6 +11,11 @@ import { PomodoroProvider } from "@/context/PomodoroProvider";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { ThemeProvider } from "@/context/ThemeProvider";
 import Notes from "./pages/Notes";
+// Add imports for missing pages
+import Timer from "./pages/Timer";
+import Tasks from "./pages/Tasks";
+import Activity from "./pages/Activity";
+import Appearance from "./pages/Appearance";
 
 const queryClient = new QueryClient();
 
@@ -49,3 +55,4 @@ const App = () => {
 };
 
 export default App;
+
