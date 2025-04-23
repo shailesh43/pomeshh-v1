@@ -1,3 +1,4 @@
+
 import {
   Sidebar,
   SidebarContent,
@@ -8,7 +9,7 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
 } from "@/components/ui/sidebar";
-import { Clock, Book, BookOpen, User, Settings, FileText } from "lucide-react";
+import { Clock, Book, BookOpen, FileText } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
 import React from "react";
 import clsx from "clsx";
@@ -23,12 +24,7 @@ const sections = [
       { label: "Notes", icon: "file-text", to: "/notes" },
     ],
   },
-  {
-    label: "Settings",
-    items: [
-      { label: "Appearance", icon: Settings, to: "/appearance" },
-    ],
-  },
+  // Removed "Settings" and "Appearance" section.
 ];
 
 const AppSidebar = () => {
